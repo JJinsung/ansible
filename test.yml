@@ -112,7 +112,8 @@
       delegate_to: localhost
       
       
-  tasks: 
+
+## router
     - name: Create a sub folder under VM folder on given datacenter
       community.vmware.vcenter_folder:
           hostname: '{{ vcenter_hostname }}'
@@ -219,7 +220,7 @@
       register: shell_command_with_wait_timeout      
       
       
-  tasks:
+## DC
   - name: Deploy Domain Controller VM from Template
     community.vmware.vmware_guest:
       hostname: "{{ vcenter_hostname }}"
@@ -273,7 +274,7 @@
     delegate_to: localhost      
     
     
-  tasks: 
+ ## AD-DS
     - name: Install_WindowsFeatures_AD-DS
       community.vmware.vmware_vm_shell:
           hostname: '{{ vcenter_hostname }}'
