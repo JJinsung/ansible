@@ -8,7 +8,7 @@
     vcenter_username: "administrator@vsphere.kh"
     vcenter_password: "VMware1!"
     datacenter_name: "vSAN Datacenter"
-    esxi_hostname: "200.200.200.247"
+##    esxi_hostname: "200.200.200.250"
 ##    student_ID: "S00"
     full_folder_prefix: "vSAN Datacenter/vm/Students/"
     datastore_name: "vsanDatastore"
@@ -18,6 +18,10 @@
   vars_prompt:
     - name: student_ID
       prompt: What is your student ID (ex:S00)?
+      private: no
+
+    - name: esxi_hostname
+      prompt: What is your esxi_hostname (ex:200.200.200.250)?
       private: no
 
 
