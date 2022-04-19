@@ -8,7 +8,7 @@
     vcenter_hostname: "200.200.200.251"
     vcenter_username: "administrator@vsphere.kh"
     vcenter_password: "VMware1!"
-    esxi_hostname: "200.200.200.247"
+##    esxi_hostname: "200.200.200.250"
     esxi_username: "root"
     esxi_password: "VMware1!"
 ##    student_ID: "S00"
@@ -16,6 +16,10 @@
   vars_prompt:
     - name: student_ID
       prompt: What is your student ID (ex:S00)?
+      private: no
+
+    - name: esxi_hostname
+      prompt: What is your esxi_hostname (ex:200.200.200.250)?
       private: no
 
   tasks: 
